@@ -48,7 +48,7 @@ class AnymalCFlatCfg( AnymalCRoughCfg ):
             torques = -0.000025
             feet_air_time = 2.
             # feet_contact_forces = -0.01
-    
+
     class commands( AnymalCRoughCfg.commands ):
         heading_command = False
         resampling_time = 4.

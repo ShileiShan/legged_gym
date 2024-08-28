@@ -39,6 +39,12 @@ from .cassie.cassie import Cassie
 from .cassie.cassie_config import CassieRoughCfg, CassieRoughCfgPPO
 from .a1.a1_config import A1RoughCfg, A1RoughCfgPPO
 
+from legged_gym.envs.go2.go2_config import Go2RoughCfg, Go2RoughCfgPPO
+from legged_gym.envs.go2.go2_flat_config import Go2FlatCfg, Go2FlatCfgPPO
+from legged_gym.envs.go1.go1_config import Go1RoughCfg, Go1RoughCfgPPO
+from legged_gym.envs.go1.go1_flat_config import Go1FlatCfg, Go1FlatCfgPPO
+
+# from legged_gym.envs.go2.go2_robot import Go2Robot
 
 import os
 
@@ -49,3 +55,7 @@ task_registry.register( "anymal_c_flat", Anymal, AnymalCFlatCfg(), AnymalCFlatCf
 task_registry.register( "anymal_b", Anymal, AnymalBRoughCfg(), AnymalBRoughCfgPPO() )
 task_registry.register( "a1", LeggedRobot, A1RoughCfg(), A1RoughCfgPPO() )
 task_registry.register( "cassie", Cassie, CassieRoughCfg(), CassieRoughCfgPPO() )
+task_registry.register( "go2_rough", LeggedRobot, Go2RoughCfg(), Go2RoughCfgPPO())
+task_registry.register( "go2_flat", LeggedRobot, Go2FlatCfg(), Go2FlatCfgPPO())
+task_registry.register( "go1_rough", LeggedRobot, Go1RoughCfg(), Go1RoughCfgPPO())
+task_registry.register( "go1_flat", LeggedRobot, Go1FlatCfg(), Go1FlatCfgPPO())

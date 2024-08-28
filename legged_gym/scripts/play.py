@@ -105,12 +105,12 @@ def play(args):
     #  get input 
     #vel =x
     #obs[:,9:13] = vel.
-    keyboard_thread = threading.Thread(target=monitor_keyboard)
-    keyboard_thread.start()
-    global _command
+    # keyboard_thread = threading.Thread(target=monitor_keyboard)
+    # keyboard_thread.start()
+    # global _command
     for i in range(10*int(env.max_episode_length)):
         # set obs
-        obs[:,9:13] = _command
+        # obs[:,9:13] = _command
         actions = policy(obs.detach())
         obs, _, rews, dones, infos = env.step(actions.detach())
         if RECORD_FRAMES:
